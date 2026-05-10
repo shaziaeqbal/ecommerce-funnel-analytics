@@ -1,0 +1,1099 @@
+[0m21:38:22.010198 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000236BE38F350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000236BE2E6910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000236BE2D2850>]}
+
+
+============================== 21:38:22.024321 | c3daa208-44ec-4de3-a2b9-ff66ef85ea64 ==============================
+[0m21:38:22.024321 [info ] [MainThread]: Running with dbt=1.11.9
+[0m21:38:22.027264 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\zia\\Desktop\\ecommerce_funnel\\dbt_project', 'indirect_selection': 'eager', 'invocation_command': 'dbt run', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\zia\\Desktop\\ecommerce_funnel\\dbt_project\\logs'}
+[0m21:38:23.328968 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c3daa208-44ec-4de3-a2b9-ff66ef85ea64', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000236BE5A5C50>]}
+[0m21:38:23.804184 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c3daa208-44ec-4de3-a2b9-ff66ef85ea64', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000236B9ABF110>]}
+[0m21:38:23.829681 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m21:38:25.682614 [debug] [MainThread]: checksum: f8bb6a62265c70f2530bed05e52c2cee1c1844b101d398a67d5798350ab914c5, vars: {}, profile: , target: , version: 1.11.9
+[0m21:38:25.688593 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m21:38:25.688690 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'c3daa208-44ec-4de3-a2b9-ff66ef85ea64', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000236BE847890>]}
+[0m21:38:33.627755 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c3daa208-44ec-4de3-a2b9-ff66ef85ea64', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000236B9A9BE90>]}
+[0m21:38:33.917680 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\zia\Desktop\ecommerce_funnel\dbt_project\target\manifest.json
+[0m21:38:33.933335 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\zia\Desktop\ecommerce_funnel\dbt_project\target\semantic_manifest.json
+[0m21:38:34.003258 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c3daa208-44ec-4de3-a2b9-ff66ef85ea64', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000236BE5FF950>]}
+[0m21:38:34.003258 [info ] [MainThread]: Found 7 models, 477 macros
+[0m21:38:34.003258 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c3daa208-44ec-4de3-a2b9-ff66ef85ea64', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000236BE847450>]}
+[0m21:38:34.018276 [info ] [MainThread]: 
+[0m21:38:34.021440 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m21:38:34.023956 [info ] [MainThread]: 
+[0m21:38:34.026309 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m21:38:34.087267 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_ecommerce'
+[0m21:38:41.804310 [debug] [ThreadPool]: Using duckdb connection "list_ecommerce"
+[0m21:38:41.806351 [debug] [ThreadPool]: On list_ecommerce: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "connection_name": "list_ecommerce"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"ecommerce"'
+    
+  
+  
+[0m21:38:41.807308 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:38:41.907946 [debug] [ThreadPool]: SQL status: OK in 0.104 seconds
+[0m21:38:41.923569 [debug] [ThreadPool]: On list_ecommerce: Close
+[0m21:38:41.923569 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_ecommerce, now create_ecommerce_main)
+[0m21:38:41.923569 [debug] [ThreadPool]: Creating schema "database: "ecommerce"
+schema: "main"
+"
+[0m21:38:41.954807 [debug] [ThreadPool]: Using duckdb connection "create_ecommerce_main"
+[0m21:38:41.954807 [debug] [ThreadPool]: On create_ecommerce_main: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "connection_name": "create_ecommerce_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='ecommerce'
+        and type='sqlite'
+    
+  
+[0m21:38:41.963881 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:38:41.963881 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m21:38:41.970899 [debug] [ThreadPool]: Using duckdb connection "create_ecommerce_main"
+[0m21:38:41.970899 [debug] [ThreadPool]: On create_ecommerce_main: BEGIN
+[0m21:38:41.970899 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m21:38:41.970899 [debug] [ThreadPool]: Using duckdb connection "create_ecommerce_main"
+[0m21:38:41.970899 [debug] [ThreadPool]: On create_ecommerce_main: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "connection_name": "create_ecommerce_main"} */
+
+    
+    
+        create schema if not exists "ecommerce"."main"
+    
+[0m21:38:41.970899 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m21:38:41.988763 [debug] [ThreadPool]: On create_ecommerce_main: COMMIT
+[0m21:38:41.990707 [debug] [ThreadPool]: Using duckdb connection "create_ecommerce_main"
+[0m21:38:41.992695 [debug] [ThreadPool]: On create_ecommerce_main: COMMIT
+[0m21:38:41.995686 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m21:38:41.997679 [debug] [ThreadPool]: On create_ecommerce_main: Close
+[0m21:38:42.003706 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_ecommerce_main'
+[0m21:38:42.050182 [debug] [ThreadPool]: Using duckdb connection "list_ecommerce_main"
+[0m21:38:42.050182 [debug] [ThreadPool]: On list_ecommerce_main: BEGIN
+[0m21:38:42.065837 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:38:42.065837 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m21:38:42.065837 [debug] [ThreadPool]: Using duckdb connection "list_ecommerce_main"
+[0m21:38:42.065837 [debug] [ThreadPool]: On list_ecommerce_main: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "connection_name": "list_ecommerce_main"} */
+select
+      'ecommerce' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'ecommerce'
+  
+[0m21:38:42.094059 [debug] [ThreadPool]: SQL status: OK in 0.022 seconds
+[0m21:38:42.099044 [debug] [ThreadPool]: On list_ecommerce_main: ROLLBACK
+[0m21:38:42.103032 [debug] [ThreadPool]: Failed to rollback 'list_ecommerce_main'
+[0m21:38:42.105025 [debug] [ThreadPool]: On list_ecommerce_main: Close
+[0m21:38:42.108889 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c3daa208-44ec-4de3-a2b9-ff66ef85ea64', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000236BE4DFB50>]}
+[0m21:38:42.111066 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:38:42.111066 [debug] [MainThread]: On master: BEGIN
+[0m21:38:42.111066 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:38:42.111066 [debug] [MainThread]: SQL status: OK in 0.002 seconds
+[0m21:38:42.111066 [debug] [MainThread]: On master: COMMIT
+[0m21:38:42.111066 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:38:42.111066 [debug] [MainThread]: On master: COMMIT
+[0m21:38:42.111066 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m21:38:42.111066 [debug] [MainThread]: On master: Close
+[0m21:38:42.126698 [debug] [Thread-1 (]: Began running node model.ecommerce_funnel.stg_sessions
+[0m21:38:42.126698 [info ] [Thread-1 (]: 1 of 7 START sql view model main.stg_sessions .................................. [RUN]
+[0m21:38:42.145165 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.ecommerce_funnel.stg_sessions'
+[0m21:38:42.145165 [debug] [Thread-1 (]: Began compiling node model.ecommerce_funnel.stg_sessions
+[0m21:38:42.192498 [debug] [Thread-1 (]: Writing injected SQL for node "model.ecommerce_funnel.stg_sessions"
+[0m21:38:42.199473 [debug] [Thread-1 (]: Began executing node model.ecommerce_funnel.stg_sessions
+[0m21:38:42.306344 [debug] [Thread-1 (]: Writing runtime sql for node "model.ecommerce_funnel.stg_sessions"
+[0m21:38:42.313570 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.stg_sessions"
+[0m21:38:42.315562 [debug] [Thread-1 (]: On model.ecommerce_funnel.stg_sessions: BEGIN
+[0m21:38:42.317556 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m21:38:42.320551 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m21:38:42.322587 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.stg_sessions"
+[0m21:38:42.324566 [debug] [Thread-1 (]: On model.ecommerce_funnel.stg_sessions: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.stg_sessions"} */
+
+  
+  create view "ecommerce"."main"."stg_sessions__dbt_tmp" as (
+    SELECT
+    session_id,
+    user_id,
+    channel,
+    device,
+    country,
+    session_date,
+    page_views,
+    session_duration,
+    bounce,
+    viewed_product,
+    added_to_cart,
+    reached_checkout,
+    purchased
+FROM sessions
+  );
+
+[0m21:38:42.328526 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m21:38:42.346272 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.stg_sessions"
+[0m21:38:42.346272 [debug] [Thread-1 (]: On model.ecommerce_funnel.stg_sessions: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.stg_sessions"} */
+alter view "ecommerce"."main"."stg_sessions__dbt_tmp" rename to "stg_sessions"
+[0m21:38:42.361852 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m21:38:42.402332 [debug] [Thread-1 (]: On model.ecommerce_funnel.stg_sessions: COMMIT
+[0m21:38:42.404322 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.stg_sessions"
+[0m21:38:42.406317 [debug] [Thread-1 (]: On model.ecommerce_funnel.stg_sessions: COMMIT
+[0m21:38:42.416434 [debug] [Thread-1 (]: SQL status: OK in 0.008 seconds
+[0m21:38:42.436622 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.stg_sessions"
+[0m21:38:42.438621 [debug] [Thread-1 (]: On model.ecommerce_funnel.stg_sessions: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.stg_sessions"} */
+
+      drop view if exists "ecommerce"."main"."stg_sessions__dbt_backup" cascade
+    
+[0m21:38:42.439687 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:38:42.439687 [debug] [Thread-1 (]: On model.ecommerce_funnel.stg_sessions: Close
+[0m21:38:42.455359 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c3daa208-44ec-4de3-a2b9-ff66ef85ea64', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000236BEBA8850>]}
+[0m21:38:42.455359 [info ] [Thread-1 (]: 1 of 7 OK created sql view model main.stg_sessions ............................. [[32mOK[0m in 0.30s]
+[0m21:38:42.455359 [debug] [Thread-1 (]: Finished running node model.ecommerce_funnel.stg_sessions
+[0m21:38:42.455359 [debug] [Thread-1 (]: Began running node model.ecommerce_funnel.stg_transactions
+[0m21:38:42.455359 [info ] [Thread-1 (]: 2 of 7 START sql view model main.stg_transactions .............................. [RUN]
+[0m21:38:42.470954 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ecommerce_funnel.stg_sessions, now model.ecommerce_funnel.stg_transactions)
+[0m21:38:42.475076 [debug] [Thread-1 (]: Began compiling node model.ecommerce_funnel.stg_transactions
+[0m21:38:42.507520 [debug] [Thread-1 (]: Writing injected SQL for node "model.ecommerce_funnel.stg_transactions"
+[0m21:38:42.527182 [debug] [Thread-1 (]: Began executing node model.ecommerce_funnel.stg_transactions
+[0m21:38:42.549417 [debug] [Thread-1 (]: Writing runtime sql for node "model.ecommerce_funnel.stg_transactions"
+[0m21:38:42.555567 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.stg_transactions"
+[0m21:38:42.555567 [debug] [Thread-1 (]: On model.ecommerce_funnel.stg_transactions: BEGIN
+[0m21:38:42.555567 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:38:42.555567 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m21:38:42.565155 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.stg_transactions"
+[0m21:38:42.565155 [debug] [Thread-1 (]: On model.ecommerce_funnel.stg_transactions: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.stg_transactions"} */
+
+  
+  create view "ecommerce"."main"."stg_transactions__dbt_tmp" as (
+    SELECT
+    transaction_id,
+    session_id,
+    user_id,
+    category,
+    revenue,
+    quantity,
+    transaction_date
+FROM transactions
+  );
+
+[0m21:38:42.565155 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m21:38:42.580849 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.stg_transactions"
+[0m21:38:42.580849 [debug] [Thread-1 (]: On model.ecommerce_funnel.stg_transactions: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.stg_transactions"} */
+alter view "ecommerce"."main"."stg_transactions__dbt_tmp" rename to "stg_transactions"
+[0m21:38:42.580849 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:38:42.580849 [debug] [Thread-1 (]: On model.ecommerce_funnel.stg_transactions: COMMIT
+[0m21:38:42.596413 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.stg_transactions"
+[0m21:38:42.596413 [debug] [Thread-1 (]: On model.ecommerce_funnel.stg_transactions: COMMIT
+[0m21:38:42.596413 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m21:38:42.612037 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.stg_transactions"
+[0m21:38:42.612037 [debug] [Thread-1 (]: On model.ecommerce_funnel.stg_transactions: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.stg_transactions"} */
+
+      drop view if exists "ecommerce"."main"."stg_transactions__dbt_backup" cascade
+    
+[0m21:38:42.612037 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:38:42.627716 [debug] [Thread-1 (]: On model.ecommerce_funnel.stg_transactions: Close
+[0m21:38:42.627716 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c3daa208-44ec-4de3-a2b9-ff66ef85ea64', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000236BEFDB390>]}
+[0m21:38:42.627716 [info ] [Thread-1 (]: 2 of 7 OK created sql view model main.stg_transactions ......................... [[32mOK[0m in 0.16s]
+[0m21:38:42.627716 [debug] [Thread-1 (]: Finished running node model.ecommerce_funnel.stg_transactions
+[0m21:38:42.627716 [debug] [Thread-1 (]: Began running node model.ecommerce_funnel.int_funnel_steps
+[0m21:38:42.627716 [info ] [Thread-1 (]: 3 of 7 START sql view model main.int_funnel_steps .............................. [RUN]
+[0m21:38:42.646020 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ecommerce_funnel.stg_transactions, now model.ecommerce_funnel.int_funnel_steps)
+[0m21:38:42.649523 [debug] [Thread-1 (]: Began compiling node model.ecommerce_funnel.int_funnel_steps
+[0m21:38:42.678205 [debug] [Thread-1 (]: Writing injected SQL for node "model.ecommerce_funnel.int_funnel_steps"
+[0m21:38:42.686386 [debug] [Thread-1 (]: Began executing node model.ecommerce_funnel.int_funnel_steps
+[0m21:38:42.720297 [debug] [Thread-1 (]: Writing runtime sql for node "model.ecommerce_funnel.int_funnel_steps"
+[0m21:38:42.726282 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.int_funnel_steps"
+[0m21:38:42.728271 [debug] [Thread-1 (]: On model.ecommerce_funnel.int_funnel_steps: BEGIN
+[0m21:38:42.731262 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:38:42.734250 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m21:38:42.737342 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.int_funnel_steps"
+[0m21:38:42.738728 [debug] [Thread-1 (]: On model.ecommerce_funnel.int_funnel_steps: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.int_funnel_steps"} */
+
+  
+  create view "ecommerce"."main"."int_funnel_steps__dbt_tmp" as (
+    SELECT
+    channel,
+    device,
+    COUNT(*)                          AS total_sessions,
+    SUM(viewed_product)               AS viewed_product,
+    SUM(added_to_cart)                AS added_to_cart,
+    SUM(reached_checkout)             AS reached_checkout,
+    SUM(purchased)                    AS purchased,
+    ROUND(SUM(viewed_product)*100.0  / COUNT(*),2)        AS view_rate,
+    ROUND(SUM(added_to_cart)*100.0   / NULLIF(SUM(viewed_product),0),2)  AS cart_rate,
+    ROUND(SUM(reached_checkout)*100.0/ NULLIF(SUM(added_to_cart),0),2)   AS checkout_rate,
+    ROUND(SUM(purchased)*100.0       / NULLIF(SUM(reached_checkout),0),2) AS purchase_rate
+FROM "ecommerce"."main"."stg_sessions"
+GROUP BY 1,2
+  );
+
+[0m21:38:42.738728 [debug] [Thread-1 (]: SQL status: OK in 0.010 seconds
+[0m21:38:42.765437 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.int_funnel_steps"
+[0m21:38:42.768526 [debug] [Thread-1 (]: On model.ecommerce_funnel.int_funnel_steps: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.int_funnel_steps"} */
+alter view "ecommerce"."main"."int_funnel_steps__dbt_tmp" rename to "int_funnel_steps"
+[0m21:38:42.772667 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m21:38:42.778635 [debug] [Thread-1 (]: On model.ecommerce_funnel.int_funnel_steps: COMMIT
+[0m21:38:42.780636 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.int_funnel_steps"
+[0m21:38:42.783626 [debug] [Thread-1 (]: On model.ecommerce_funnel.int_funnel_steps: COMMIT
+[0m21:38:42.792934 [debug] [Thread-1 (]: SQL status: OK in 0.006 seconds
+[0m21:38:42.805157 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.int_funnel_steps"
+[0m21:38:42.807167 [debug] [Thread-1 (]: On model.ecommerce_funnel.int_funnel_steps: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.int_funnel_steps"} */
+
+      drop view if exists "ecommerce"."main"."int_funnel_steps__dbt_backup" cascade
+    
+[0m21:38:42.810143 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m21:38:42.815217 [debug] [Thread-1 (]: On model.ecommerce_funnel.int_funnel_steps: Close
+[0m21:38:42.815217 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c3daa208-44ec-4de3-a2b9-ff66ef85ea64', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000236BEE9F710>]}
+[0m21:38:42.815217 [info ] [Thread-1 (]: 3 of 7 OK created sql view model main.int_funnel_steps ......................... [[32mOK[0m in 0.17s]
+[0m21:38:42.815217 [debug] [Thread-1 (]: Finished running node model.ecommerce_funnel.int_funnel_steps
+[0m21:38:42.815217 [debug] [Thread-1 (]: Began running node model.ecommerce_funnel.mart_cart_abandonment
+[0m21:38:42.831996 [info ] [Thread-1 (]: 4 of 7 START sql table model main.mart_cart_abandonment ........................ [RUN]
+[0m21:38:42.835844 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ecommerce_funnel.int_funnel_steps, now model.ecommerce_funnel.mart_cart_abandonment)
+[0m21:38:42.838726 [debug] [Thread-1 (]: Began compiling node model.ecommerce_funnel.mart_cart_abandonment
+[0m21:38:42.873617 [debug] [Thread-1 (]: Writing injected SQL for node "model.ecommerce_funnel.mart_cart_abandonment"
+[0m21:38:42.901052 [debug] [Thread-1 (]: Began executing node model.ecommerce_funnel.mart_cart_abandonment
+[0m21:38:42.999372 [debug] [Thread-1 (]: Writing runtime sql for node "model.ecommerce_funnel.mart_cart_abandonment"
+[0m21:38:43.018728 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.mart_cart_abandonment"
+[0m21:38:43.018728 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_cart_abandonment: BEGIN
+[0m21:38:43.018728 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:38:43.030744 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m21:38:43.030744 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.mart_cart_abandonment"
+[0m21:38:43.030744 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_cart_abandonment: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.mart_cart_abandonment"} */
+
+  
+    
+    
+
+    create  table
+      "ecommerce"."main"."mart_cart_abandonment__dbt_tmp"
+  
+    as (
+      SELECT
+    s.session_id,
+    s.user_id,
+    s.channel,
+    s.device,
+    s.country,
+    s.page_views,
+    s.session_duration,
+    s.bounce,
+    s.added_to_cart,
+    s.reached_checkout,
+    s.purchased,
+    CASE WHEN s.added_to_cart=1 AND s.purchased=0 THEN 1 ELSE 0 END AS abandoned
+FROM "ecommerce"."main"."stg_sessions" s
+WHERE s.added_to_cart = 1
+    );
+  
+  
+[0m21:38:43.112068 [debug] [Thread-1 (]: SQL status: OK in 0.076 seconds
+[0m21:38:43.127687 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.mart_cart_abandonment"
+[0m21:38:43.127687 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_cart_abandonment: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.mart_cart_abandonment"} */
+alter table "ecommerce"."main"."mart_cart_abandonment__dbt_tmp" rename to "mart_cart_abandonment"
+[0m21:38:43.127687 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m21:38:43.158941 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_cart_abandonment: COMMIT
+[0m21:38:43.158941 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.mart_cart_abandonment"
+[0m21:38:43.158941 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_cart_abandonment: COMMIT
+[0m21:38:43.205054 [debug] [Thread-1 (]: SQL status: OK in 0.033 seconds
+[0m21:38:43.220680 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.mart_cart_abandonment"
+[0m21:38:43.220680 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_cart_abandonment: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.mart_cart_abandonment"} */
+
+      drop table if exists "ecommerce"."main"."mart_cart_abandonment__dbt_backup" cascade
+    
+[0m21:38:43.220680 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m21:38:43.236301 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_cart_abandonment: Close
+[0m21:38:43.236301 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c3daa208-44ec-4de3-a2b9-ff66ef85ea64', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000236BF07F610>]}
+[0m21:38:43.236301 [info ] [Thread-1 (]: 4 of 7 OK created sql table model main.mart_cart_abandonment ................... [[32mOK[0m in 0.40s]
+[0m21:38:43.251936 [debug] [Thread-1 (]: Finished running node model.ecommerce_funnel.mart_cart_abandonment
+[0m21:38:43.251936 [debug] [Thread-1 (]: Began running node model.ecommerce_funnel.int_channel_attribution
+[0m21:38:43.251936 [info ] [Thread-1 (]: 5 of 7 START sql view model main.int_channel_attribution ....................... [RUN]
+[0m21:38:43.251936 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ecommerce_funnel.mart_cart_abandonment, now model.ecommerce_funnel.int_channel_attribution)
+[0m21:38:43.268729 [debug] [Thread-1 (]: Began compiling node model.ecommerce_funnel.int_channel_attribution
+[0m21:38:43.288766 [debug] [Thread-1 (]: Writing injected SQL for node "model.ecommerce_funnel.int_channel_attribution"
+[0m21:38:43.296689 [debug] [Thread-1 (]: Began executing node model.ecommerce_funnel.int_channel_attribution
+[0m21:38:43.336896 [debug] [Thread-1 (]: Writing runtime sql for node "model.ecommerce_funnel.int_channel_attribution"
+[0m21:38:43.336896 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.int_channel_attribution"
+[0m21:38:43.336896 [debug] [Thread-1 (]: On model.ecommerce_funnel.int_channel_attribution: BEGIN
+[0m21:38:43.354134 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:38:43.354134 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m21:38:43.359595 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.int_channel_attribution"
+[0m21:38:43.359595 [debug] [Thread-1 (]: On model.ecommerce_funnel.int_channel_attribution: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.int_channel_attribution"} */
+
+  
+  create view "ecommerce"."main"."int_channel_attribution__dbt_tmp" as (
+    SELECT
+    s.channel,
+    COUNT(DISTINCT s.session_id)  AS sessions,
+    COUNT(DISTINCT t.transaction_id) AS transactions,
+    ROUND(SUM(t.revenue),2)       AS total_revenue,
+    ROUND(AVG(t.revenue),2)       AS avg_order_value
+FROM "ecommerce"."main"."stg_sessions" s
+LEFT JOIN "ecommerce"."main"."stg_transactions" t USING (session_id)
+GROUP BY 1
+  );
+
+[0m21:38:43.375104 [debug] [Thread-1 (]: SQL status: OK in 0.008 seconds
+[0m21:38:43.396046 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.int_channel_attribution"
+[0m21:38:43.400032 [debug] [Thread-1 (]: On model.ecommerce_funnel.int_channel_attribution: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.int_channel_attribution"} */
+alter view "ecommerce"."main"."int_channel_attribution__dbt_tmp" rename to "int_channel_attribution"
+[0m21:38:43.406013 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m21:38:43.415237 [debug] [Thread-1 (]: On model.ecommerce_funnel.int_channel_attribution: COMMIT
+[0m21:38:43.418236 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.int_channel_attribution"
+[0m21:38:43.421221 [debug] [Thread-1 (]: On model.ecommerce_funnel.int_channel_attribution: COMMIT
+[0m21:38:43.424322 [debug] [Thread-1 (]: SQL status: OK in 0.006 seconds
+[0m21:38:43.439948 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.int_channel_attribution"
+[0m21:38:43.439948 [debug] [Thread-1 (]: On model.ecommerce_funnel.int_channel_attribution: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.int_channel_attribution"} */
+
+      drop view if exists "ecommerce"."main"."int_channel_attribution__dbt_backup" cascade
+    
+[0m21:38:43.455575 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m21:38:43.455575 [debug] [Thread-1 (]: On model.ecommerce_funnel.int_channel_attribution: Close
+[0m21:38:43.471199 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c3daa208-44ec-4de3-a2b9-ff66ef85ea64', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000236BF085C10>]}
+[0m21:38:43.471199 [info ] [Thread-1 (]: 5 of 7 OK created sql view model main.int_channel_attribution .................. [[32mOK[0m in 0.22s]
+[0m21:38:43.471199 [debug] [Thread-1 (]: Finished running node model.ecommerce_funnel.int_channel_attribution
+[0m21:38:43.471199 [debug] [Thread-1 (]: Began running node model.ecommerce_funnel.mart_funnel_analysis
+[0m21:38:43.491396 [info ] [Thread-1 (]: 6 of 7 START sql table model main.mart_funnel_analysis ......................... [RUN]
+[0m21:38:43.495441 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ecommerce_funnel.int_channel_attribution, now model.ecommerce_funnel.mart_funnel_analysis)
+[0m21:38:43.499603 [debug] [Thread-1 (]: Began compiling node model.ecommerce_funnel.mart_funnel_analysis
+[0m21:38:43.525946 [debug] [Thread-1 (]: Writing injected SQL for node "model.ecommerce_funnel.mart_funnel_analysis"
+[0m21:38:43.532921 [debug] [Thread-1 (]: Began executing node model.ecommerce_funnel.mart_funnel_analysis
+[0m21:38:43.570930 [debug] [Thread-1 (]: Writing runtime sql for node "model.ecommerce_funnel.mart_funnel_analysis"
+[0m21:38:43.578145 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.mart_funnel_analysis"
+[0m21:38:43.582124 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_funnel_analysis: BEGIN
+[0m21:38:43.586258 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:38:43.586258 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m21:38:43.586258 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.mart_funnel_analysis"
+[0m21:38:43.586258 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_funnel_analysis: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.mart_funnel_analysis"} */
+
+  
+    
+    
+
+    create  table
+      "ecommerce"."main"."mart_funnel_analysis__dbt_tmp"
+  
+    as (
+      SELECT
+    channel,
+    device,
+    total_sessions,
+    viewed_product,
+    added_to_cart,
+    reached_checkout,
+    purchased,
+    view_rate,
+    cart_rate,
+    checkout_rate,
+    purchase_rate,
+    ROUND((added_to_cart - purchased)*100.0/NULLIF(added_to_cart,0),2) AS abandonment_rate
+FROM "ecommerce"."main"."int_funnel_steps"
+    );
+  
+  
+[0m21:38:43.677639 [debug] [Thread-1 (]: SQL status: OK in 0.079 seconds
+[0m21:38:43.690971 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.mart_funnel_analysis"
+[0m21:38:43.690971 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_funnel_analysis: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.mart_funnel_analysis"} */
+alter table "ecommerce"."main"."mart_funnel_analysis__dbt_tmp" rename to "mart_funnel_analysis"
+[0m21:38:43.706633 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m21:38:43.706633 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_funnel_analysis: COMMIT
+[0m21:38:43.706633 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.mart_funnel_analysis"
+[0m21:38:43.706633 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_funnel_analysis: COMMIT
+[0m21:38:43.722231 [debug] [Thread-1 (]: SQL status: OK in 0.009 seconds
+[0m21:38:43.747092 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.mart_funnel_analysis"
+[0m21:38:43.750084 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_funnel_analysis: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.mart_funnel_analysis"} */
+
+      drop table if exists "ecommerce"."main"."mart_funnel_analysis__dbt_backup" cascade
+    
+[0m21:38:43.752189 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m21:38:43.752189 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_funnel_analysis: Close
+[0m21:38:43.752189 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c3daa208-44ec-4de3-a2b9-ff66ef85ea64', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000236BEF71390>]}
+[0m21:38:43.767823 [info ] [Thread-1 (]: 6 of 7 OK created sql table model main.mart_funnel_analysis .................... [[32mOK[0m in 0.26s]
+[0m21:38:43.767823 [debug] [Thread-1 (]: Finished running node model.ecommerce_funnel.mart_funnel_analysis
+[0m21:38:43.767823 [debug] [Thread-1 (]: Began running node model.ecommerce_funnel.mart_revenue_impact
+[0m21:38:43.767823 [info ] [Thread-1 (]: 7 of 7 START sql table model main.mart_revenue_impact .......................... [RUN]
+[0m21:38:43.783438 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ecommerce_funnel.mart_funnel_analysis, now model.ecommerce_funnel.mart_revenue_impact)
+[0m21:38:43.789745 [debug] [Thread-1 (]: Began compiling node model.ecommerce_funnel.mart_revenue_impact
+[0m21:38:43.806336 [debug] [Thread-1 (]: Writing injected SQL for node "model.ecommerce_funnel.mart_revenue_impact"
+[0m21:38:43.806336 [debug] [Thread-1 (]: Began executing node model.ecommerce_funnel.mart_revenue_impact
+[0m21:38:43.846835 [debug] [Thread-1 (]: Writing runtime sql for node "model.ecommerce_funnel.mart_revenue_impact"
+[0m21:38:43.852815 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.mart_revenue_impact"
+[0m21:38:43.856802 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_revenue_impact: BEGIN
+[0m21:38:43.858796 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:38:43.861898 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m21:38:43.861898 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.mart_revenue_impact"
+[0m21:38:43.861898 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_revenue_impact: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.mart_revenue_impact"} */
+
+  
+    
+    
+
+    create  table
+      "ecommerce"."main"."mart_revenue_impact__dbt_tmp"
+  
+    as (
+      WITH base AS (
+    SELECT
+        channel,
+        COUNT(*) FILTER (WHERE abandoned=1) AS abandoned_carts,
+        COUNT(*) FILTER (WHERE abandoned=0) AS converted_carts,
+        COUNT(*)                             AS total_carts
+    FROM "ecommerce"."main"."mart_cart_abandonment"
+    GROUP BY 1
+),
+aov AS (
+    SELECT ROUND(AVG(revenue),2) AS avg_order_value
+    FROM "ecommerce"."main"."stg_transactions"
+)
+SELECT
+    b.channel,
+    b.abandoned_carts,
+    b.converted_carts,
+    b.total_carts,
+    a.avg_order_value,
+    ROUND(b.abandoned_carts * a.avg_order_value, 2)          AS lost_revenue,
+    ROUND(b.abandoned_carts * a.avg_order_value * 0.10, 2)   AS recovery_10pct,
+    ROUND(b.abandoned_carts * a.avg_order_value * 0.20, 2)   AS recovery_20pct
+FROM base b CROSS JOIN aov a
+    );
+  
+  
+[0m21:38:43.894830 [debug] [Thread-1 (]: SQL status: OK in 0.031 seconds
+[0m21:38:43.919869 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.mart_revenue_impact"
+[0m21:38:43.919869 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_revenue_impact: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.mart_revenue_impact"} */
+alter table "ecommerce"."main"."mart_revenue_impact__dbt_tmp" rename to "mart_revenue_impact"
+[0m21:38:43.919869 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m21:38:43.934880 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_revenue_impact: COMMIT
+[0m21:38:43.934880 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.mart_revenue_impact"
+[0m21:38:43.934880 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_revenue_impact: COMMIT
+[0m21:38:43.954985 [debug] [Thread-1 (]: SQL status: OK in 0.008 seconds
+[0m21:38:43.968720 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.mart_revenue_impact"
+[0m21:38:43.968720 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_revenue_impact: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.mart_revenue_impact"} */
+
+      drop table if exists "ecommerce"."main"."mart_revenue_impact__dbt_backup" cascade
+    
+[0m21:38:43.983464 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m21:38:43.983464 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_revenue_impact: Close
+[0m21:38:43.983464 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c3daa208-44ec-4de3-a2b9-ff66ef85ea64', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000236C00DA290>]}
+[0m21:38:43.998485 [info ] [Thread-1 (]: 7 of 7 OK created sql table model main.mart_revenue_impact ..................... [[32mOK[0m in 0.20s]
+[0m21:38:43.998485 [debug] [Thread-1 (]: Finished running node model.ecommerce_funnel.mart_revenue_impact
+[0m21:38:44.010434 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:38:44.015601 [debug] [MainThread]: On master: BEGIN
+[0m21:38:44.019037 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m21:38:44.024192 [debug] [MainThread]: SQL status: OK in 0.005 seconds
+[0m21:38:44.024192 [debug] [MainThread]: On master: COMMIT
+[0m21:38:44.037273 [debug] [MainThread]: Using duckdb connection "master"
+[0m21:38:44.040934 [debug] [MainThread]: On master: COMMIT
+[0m21:38:44.057598 [debug] [MainThread]: SQL status: OK in 0.002 seconds
+[0m21:38:44.060589 [debug] [MainThread]: On master: Close
+[0m21:38:44.064578 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:38:44.067567 [debug] [MainThread]: Connection 'create_ecommerce_main' was properly closed.
+[0m21:38:44.071652 [debug] [MainThread]: Connection 'list_ecommerce_main' was properly closed.
+[0m21:38:44.074720 [debug] [MainThread]: Connection 'model.ecommerce_funnel.mart_revenue_impact' was properly closed.
+[0m21:38:44.077707 [info ] [MainThread]: 
+[0m21:38:44.081695 [info ] [MainThread]: Finished running 3 table models, 4 view models in 0 hours 0 minutes and 10.05 seconds (10.05s).
+[0m21:38:44.093767 [debug] [MainThread]: Command end result
+[0m21:38:44.313603 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\zia\Desktop\ecommerce_funnel\dbt_project\target\manifest.json
+[0m21:38:44.328558 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\zia\Desktop\ecommerce_funnel\dbt_project\target\semantic_manifest.json
+[0m21:38:44.369185 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\zia\Desktop\ecommerce_funnel\dbt_project\target\run_results.json
+[0m21:38:44.373221 [info ] [MainThread]: 
+[0m21:38:44.377940 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:38:44.381929 [info ] [MainThread]: 
+[0m21:38:44.385916 [info ] [MainThread]: Done. PASS=7 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=7
+[0m21:38:44.392598 [debug] [MainThread]: Command `dbt run` succeeded at 21:38:44.392598 after 22.71 seconds
+[0m21:38:44.397592 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000236BD0F7E90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000236BD0F7750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000236BE2D3D10>]}
+[0m21:38:44.401707 [debug] [MainThread]: Flushing usage events
+[0m21:38:48.518148 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:17:55.583486 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002357603D410>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235760DCA50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002357603CA10>]}
+
+
+============================== 15:17:55.609862 | ef8a842f-e9cd-4bf6-a63f-9fc60924de56 ==============================
+[0m15:17:55.609862 [info ] [MainThread]: Running with dbt=1.11.9
+[0m15:17:55.614856 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\zia\\Desktop\\ecommerce_funnel\\dbt_project', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt run', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\zia\\Desktop\\ecommerce_funnel\\dbt_project\\logs'}
+[0m15:17:57.739248 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ef8a842f-e9cd-4bf6-a63f-9fc60924de56', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023576104050>]}
+[0m15:17:58.005584 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ef8a842f-e9cd-4bf6-a63f-9fc60924de56', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235717BF1D0>]}
+[0m15:17:58.068691 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m15:17:59.508897 [debug] [MainThread]: checksum: f8bb6a62265c70f2530bed05e52c2cee1c1844b101d398a67d5798350ab914c5, vars: {}, profile: , target: , version: 1.11.9
+[0m15:18:04.843292 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m15:18:04.843292 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m15:18:04.843292 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m15:18:05.067226 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ef8a842f-e9cd-4bf6-a63f-9fc60924de56', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235760BD050>]}
+[0m15:18:05.927903 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\zia\Desktop\ecommerce_funnel\dbt_project\target\manifest.json
+[0m15:18:06.020895 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\zia\Desktop\ecommerce_funnel\dbt_project\target\semantic_manifest.json
+[0m15:18:06.225723 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ef8a842f-e9cd-4bf6-a63f-9fc60924de56', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235762BD350>]}
+[0m15:18:06.234777 [info ] [MainThread]: Found 7 models, 477 macros
+[0m15:18:06.239982 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ef8a842f-e9cd-4bf6-a63f-9fc60924de56', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235762ECCD0>]}
+[0m15:18:06.279382 [info ] [MainThread]: 
+[0m15:18:06.353285 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m15:18:06.462907 [info ] [MainThread]: 
+[0m15:18:06.503920 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m15:18:06.575560 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_ecommerce'
+[0m15:18:28.881216 [debug] [ThreadPool]: Using duckdb connection "list_ecommerce"
+[0m15:18:28.888430 [debug] [ThreadPool]: On list_ecommerce: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "connection_name": "list_ecommerce"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"ecommerce"'
+    
+  
+  
+[0m15:18:28.892524 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:18:29.213951 [debug] [ThreadPool]: SQL status: OK in 0.319 seconds
+[0m15:18:29.234854 [debug] [ThreadPool]: On list_ecommerce: Close
+[0m15:18:29.243312 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_ecommerce, now create_ecommerce_main)
+[0m15:18:29.255515 [debug] [ThreadPool]: Creating schema "database: "ecommerce"
+schema: "main"
+"
+[0m15:18:29.346664 [debug] [ThreadPool]: Using duckdb connection "create_ecommerce_main"
+[0m15:18:29.358411 [debug] [ThreadPool]: On create_ecommerce_main: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "connection_name": "create_ecommerce_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='ecommerce'
+        and type='sqlite'
+    
+  
+[0m15:18:29.363309 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:18:29.373227 [debug] [ThreadPool]: SQL status: OK in 0.013 seconds
+[0m15:18:29.409140 [debug] [ThreadPool]: Using duckdb connection "create_ecommerce_main"
+[0m15:18:29.418161 [debug] [ThreadPool]: On create_ecommerce_main: BEGIN
+[0m15:18:29.425085 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m15:18:29.434411 [debug] [ThreadPool]: Using duckdb connection "create_ecommerce_main"
+[0m15:18:29.439413 [debug] [ThreadPool]: On create_ecommerce_main: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "connection_name": "create_ecommerce_main"} */
+
+    
+    
+        create schema if not exists "ecommerce"."main"
+    
+[0m15:18:29.450409 [debug] [ThreadPool]: SQL status: OK in 0.005 seconds
+[0m15:18:29.461077 [debug] [ThreadPool]: On create_ecommerce_main: COMMIT
+[0m15:18:29.466092 [debug] [ThreadPool]: Using duckdb connection "create_ecommerce_main"
+[0m15:18:29.469594 [debug] [ThreadPool]: On create_ecommerce_main: COMMIT
+[0m15:18:29.477369 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m15:18:29.488419 [debug] [ThreadPool]: On create_ecommerce_main: Close
+[0m15:18:29.517193 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_ecommerce_main'
+[0m15:18:29.587334 [debug] [ThreadPool]: Using duckdb connection "list_ecommerce_main"
+[0m15:18:29.602985 [debug] [ThreadPool]: On list_ecommerce_main: BEGIN
+[0m15:18:29.609534 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:18:29.618645 [debug] [ThreadPool]: SQL status: OK in 0.009 seconds
+[0m15:18:29.625884 [debug] [ThreadPool]: Using duckdb connection "list_ecommerce_main"
+[0m15:18:29.632262 [debug] [ThreadPool]: On list_ecommerce_main: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "connection_name": "list_ecommerce_main"} */
+select
+      'ecommerce' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'ecommerce'
+  
+[0m15:18:29.698049 [debug] [ThreadPool]: SQL status: OK in 0.060 seconds
+[0m15:18:29.717728 [debug] [ThreadPool]: On list_ecommerce_main: ROLLBACK
+[0m15:18:29.888858 [debug] [ThreadPool]: Failed to rollback 'list_ecommerce_main'
+[0m15:18:29.895529 [debug] [ThreadPool]: On list_ecommerce_main: Close
+[0m15:18:29.918850 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ef8a842f-e9cd-4bf6-a63f-9fc60924de56', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002357418FB50>]}
+[0m15:18:29.929581 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:18:29.933645 [debug] [MainThread]: On master: BEGIN
+[0m15:18:29.941481 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:18:29.951330 [debug] [MainThread]: SQL status: OK in 0.009 seconds
+[0m15:18:29.956581 [debug] [MainThread]: On master: COMMIT
+[0m15:18:29.962560 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:18:29.967561 [debug] [MainThread]: On master: COMMIT
+[0m15:18:29.976916 [debug] [MainThread]: SQL status: OK in 0.004 seconds
+[0m15:18:29.982194 [debug] [MainThread]: On master: Close
+[0m15:18:30.021194 [debug] [Thread-1 (]: Began running node model.ecommerce_funnel.stg_sessions
+[0m15:18:30.021369 [info ] [Thread-1 (]: 1 of 7 START sql view model main.stg_sessions .................................. [RUN]
+[0m15:18:30.021369 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.ecommerce_funnel.stg_sessions'
+[0m15:18:30.036994 [debug] [Thread-1 (]: Began compiling node model.ecommerce_funnel.stg_sessions
+[0m15:18:30.133735 [debug] [Thread-1 (]: Writing injected SQL for node "model.ecommerce_funnel.stg_sessions"
+[0m15:18:30.158367 [debug] [Thread-1 (]: Began executing node model.ecommerce_funnel.stg_sessions
+[0m15:18:30.536767 [debug] [Thread-1 (]: Writing runtime sql for node "model.ecommerce_funnel.stg_sessions"
+[0m15:18:30.561026 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.stg_sessions"
+[0m15:18:30.568314 [debug] [Thread-1 (]: On model.ecommerce_funnel.stg_sessions: BEGIN
+[0m15:18:30.573474 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m15:18:30.582128 [debug] [Thread-1 (]: SQL status: OK in 0.008 seconds
+[0m15:18:30.584116 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.stg_sessions"
+[0m15:18:30.598912 [debug] [Thread-1 (]: On model.ecommerce_funnel.stg_sessions: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.stg_sessions"} */
+
+  
+  create view "ecommerce"."main"."stg_sessions__dbt_tmp" as (
+    SELECT
+    session_id,
+    user_id,
+    channel,
+    device,
+    country,
+    session_date,
+    page_views,
+    session_duration,
+    bounce,
+    viewed_product,
+    added_to_cart,
+    reached_checkout,
+    purchased
+FROM sessions
+  );
+
+[0m15:18:30.612369 [debug] [Thread-1 (]: SQL status: OK in 0.008 seconds
+[0m15:18:30.682559 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.stg_sessions"
+[0m15:18:30.690830 [debug] [Thread-1 (]: On model.ecommerce_funnel.stg_sessions: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.stg_sessions"} */
+alter view "ecommerce"."main"."stg_sessions" rename to "stg_sessions__dbt_backup"
+[0m15:18:30.702895 [debug] [Thread-1 (]: SQL status: OK in 0.006 seconds
+[0m15:18:30.745926 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.stg_sessions"
+[0m15:18:30.761768 [debug] [Thread-1 (]: On model.ecommerce_funnel.stg_sessions: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.stg_sessions"} */
+alter view "ecommerce"."main"."stg_sessions__dbt_tmp" rename to "stg_sessions"
+[0m15:18:30.768929 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m15:18:30.940318 [debug] [Thread-1 (]: On model.ecommerce_funnel.stg_sessions: COMMIT
+[0m15:18:30.953195 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.stg_sessions"
+[0m15:18:30.956523 [debug] [Thread-1 (]: On model.ecommerce_funnel.stg_sessions: COMMIT
+[0m15:18:30.969108 [debug] [Thread-1 (]: SQL status: OK in 0.014 seconds
+[0m15:18:31.040556 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.stg_sessions"
+[0m15:18:31.050276 [debug] [Thread-1 (]: On model.ecommerce_funnel.stg_sessions: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.stg_sessions"} */
+
+      drop view if exists "ecommerce"."main"."stg_sessions__dbt_backup" cascade
+    
+[0m15:18:31.057269 [debug] [Thread-1 (]: SQL status: OK in 0.007 seconds
+[0m15:18:31.089884 [debug] [Thread-1 (]: On model.ecommerce_funnel.stg_sessions: Close
+[0m15:18:31.115356 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ef8a842f-e9cd-4bf6-a63f-9fc60924de56', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235763096D0>]}
+[0m15:18:31.126864 [info ] [Thread-1 (]: 1 of 7 OK created sql view model main.stg_sessions ............................. [[32mOK[0m in 1.07s]
+[0m15:18:31.142339 [debug] [Thread-1 (]: Finished running node model.ecommerce_funnel.stg_sessions
+[0m15:18:31.151331 [debug] [Thread-1 (]: Began running node model.ecommerce_funnel.stg_transactions
+[0m15:18:31.158328 [info ] [Thread-1 (]: 2 of 7 START sql view model main.stg_transactions .............................. [RUN]
+[0m15:18:31.173423 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ecommerce_funnel.stg_sessions, now model.ecommerce_funnel.stg_transactions)
+[0m15:18:31.179419 [debug] [Thread-1 (]: Began compiling node model.ecommerce_funnel.stg_transactions
+[0m15:18:31.277569 [debug] [Thread-1 (]: Writing injected SQL for node "model.ecommerce_funnel.stg_transactions"
+[0m15:18:31.286763 [debug] [Thread-1 (]: Began executing node model.ecommerce_funnel.stg_transactions
+[0m15:18:31.367046 [debug] [Thread-1 (]: Writing runtime sql for node "model.ecommerce_funnel.stg_transactions"
+[0m15:18:31.447702 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.stg_transactions"
+[0m15:18:31.452701 [debug] [Thread-1 (]: On model.ecommerce_funnel.stg_transactions: BEGIN
+[0m15:18:31.456700 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:18:31.462178 [debug] [Thread-1 (]: SQL status: OK in 0.007 seconds
+[0m15:18:31.462178 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.stg_transactions"
+[0m15:18:31.471865 [debug] [Thread-1 (]: On model.ecommerce_funnel.stg_transactions: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.stg_transactions"} */
+
+  
+  create view "ecommerce"."main"."stg_transactions__dbt_tmp" as (
+    SELECT
+    transaction_id,
+    session_id,
+    user_id,
+    category,
+    revenue,
+    quantity,
+    transaction_date
+FROM transactions
+  );
+
+[0m15:18:31.496399 [debug] [Thread-1 (]: SQL status: OK in 0.019 seconds
+[0m15:18:31.537340 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.stg_transactions"
+[0m15:18:31.548101 [debug] [Thread-1 (]: On model.ecommerce_funnel.stg_transactions: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.stg_transactions"} */
+alter view "ecommerce"."main"."stg_transactions" rename to "stg_transactions__dbt_backup"
+[0m15:18:31.555781 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m15:18:31.584156 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.stg_transactions"
+[0m15:18:31.584156 [debug] [Thread-1 (]: On model.ecommerce_funnel.stg_transactions: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.stg_transactions"} */
+alter view "ecommerce"."main"."stg_transactions__dbt_tmp" rename to "stg_transactions"
+[0m15:18:31.584156 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m15:18:31.599779 [debug] [Thread-1 (]: On model.ecommerce_funnel.stg_transactions: COMMIT
+[0m15:18:31.615402 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.stg_transactions"
+[0m15:18:31.615402 [debug] [Thread-1 (]: On model.ecommerce_funnel.stg_transactions: COMMIT
+[0m15:18:31.632349 [debug] [Thread-1 (]: SQL status: OK in 0.007 seconds
+[0m15:18:31.662847 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.stg_transactions"
+[0m15:18:31.668739 [debug] [Thread-1 (]: On model.ecommerce_funnel.stg_transactions: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.stg_transactions"} */
+
+      drop view if exists "ecommerce"."main"."stg_transactions__dbt_backup" cascade
+    
+[0m15:18:31.680041 [debug] [Thread-1 (]: SQL status: OK in 0.007 seconds
+[0m15:18:31.693190 [debug] [Thread-1 (]: On model.ecommerce_funnel.stg_transactions: Close
+[0m15:18:31.694600 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ef8a842f-e9cd-4bf6-a63f-9fc60924de56', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023577BA7910>]}
+[0m15:18:31.703146 [info ] [Thread-1 (]: 2 of 7 OK created sql view model main.stg_transactions ......................... [[32mOK[0m in 0.52s]
+[0m15:18:31.713035 [debug] [Thread-1 (]: Finished running node model.ecommerce_funnel.stg_transactions
+[0m15:18:31.719718 [debug] [Thread-1 (]: Began running node model.ecommerce_funnel.int_funnel_steps
+[0m15:18:31.726713 [info ] [Thread-1 (]: 3 of 7 START sql view model main.int_funnel_steps .............................. [RUN]
+[0m15:18:31.733546 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ecommerce_funnel.stg_transactions, now model.ecommerce_funnel.int_funnel_steps)
+[0m15:18:31.738061 [debug] [Thread-1 (]: Began compiling node model.ecommerce_funnel.int_funnel_steps
+[0m15:18:31.788350 [debug] [Thread-1 (]: Writing injected SQL for node "model.ecommerce_funnel.int_funnel_steps"
+[0m15:18:31.798507 [debug] [Thread-1 (]: Began executing node model.ecommerce_funnel.int_funnel_steps
+[0m15:18:31.841200 [debug] [Thread-1 (]: Writing runtime sql for node "model.ecommerce_funnel.int_funnel_steps"
+[0m15:18:31.851281 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.int_funnel_steps"
+[0m15:18:31.856669 [debug] [Thread-1 (]: On model.ecommerce_funnel.int_funnel_steps: BEGIN
+[0m15:18:31.861101 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:18:31.867693 [debug] [Thread-1 (]: SQL status: OK in 0.006 seconds
+[0m15:18:31.872719 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.int_funnel_steps"
+[0m15:18:31.877708 [debug] [Thread-1 (]: On model.ecommerce_funnel.int_funnel_steps: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.int_funnel_steps"} */
+
+  
+  create view "ecommerce"."main"."int_funnel_steps__dbt_tmp" as (
+    SELECT
+    channel,
+    device,
+    COUNT(*)                          AS total_sessions,
+    SUM(viewed_product)               AS viewed_product,
+    SUM(added_to_cart)                AS added_to_cart,
+    SUM(reached_checkout)             AS reached_checkout,
+    SUM(purchased)                    AS purchased,
+    ROUND(SUM(viewed_product)*100.0  / COUNT(*),2)        AS view_rate,
+    ROUND(SUM(added_to_cart)*100.0   / NULLIF(SUM(viewed_product),0),2)  AS cart_rate,
+    ROUND(SUM(reached_checkout)*100.0/ NULLIF(SUM(added_to_cart),0),2)   AS checkout_rate,
+    ROUND(SUM(purchased)*100.0       / NULLIF(SUM(reached_checkout),0),2) AS purchase_rate
+FROM "ecommerce"."main"."stg_sessions"
+GROUP BY 1,2
+  );
+
+[0m15:18:31.908325 [debug] [Thread-1 (]: SQL status: OK in 0.024 seconds
+[0m15:18:31.932988 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.int_funnel_steps"
+[0m15:18:31.947009 [debug] [Thread-1 (]: On model.ecommerce_funnel.int_funnel_steps: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.int_funnel_steps"} */
+alter view "ecommerce"."main"."int_funnel_steps" rename to "int_funnel_steps__dbt_backup"
+[0m15:18:31.947009 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m15:18:32.000791 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.int_funnel_steps"
+[0m15:18:32.005968 [debug] [Thread-1 (]: On model.ecommerce_funnel.int_funnel_steps: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.int_funnel_steps"} */
+alter view "ecommerce"."main"."int_funnel_steps__dbt_tmp" rename to "int_funnel_steps"
+[0m15:18:32.014690 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m15:18:32.024703 [debug] [Thread-1 (]: On model.ecommerce_funnel.int_funnel_steps: COMMIT
+[0m15:18:32.035995 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.int_funnel_steps"
+[0m15:18:32.037014 [debug] [Thread-1 (]: On model.ecommerce_funnel.int_funnel_steps: COMMIT
+[0m15:18:32.052353 [debug] [Thread-1 (]: SQL status: OK in 0.015 seconds
+[0m15:18:32.086109 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.int_funnel_steps"
+[0m15:18:32.092976 [debug] [Thread-1 (]: On model.ecommerce_funnel.int_funnel_steps: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.int_funnel_steps"} */
+
+      drop view if exists "ecommerce"."main"."int_funnel_steps__dbt_backup" cascade
+    
+[0m15:18:32.107540 [debug] [Thread-1 (]: SQL status: OK in 0.006 seconds
+[0m15:18:32.121545 [debug] [Thread-1 (]: On model.ecommerce_funnel.int_funnel_steps: Close
+[0m15:18:32.128495 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ef8a842f-e9cd-4bf6-a63f-9fc60924de56', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023577C2D310>]}
+[0m15:18:32.133937 [info ] [Thread-1 (]: 3 of 7 OK created sql view model main.int_funnel_steps ......................... [[32mOK[0m in 0.40s]
+[0m15:18:32.137982 [debug] [Thread-1 (]: Finished running node model.ecommerce_funnel.int_funnel_steps
+[0m15:18:32.147501 [debug] [Thread-1 (]: Began running node model.ecommerce_funnel.mart_cart_abandonment
+[0m15:18:32.155799 [info ] [Thread-1 (]: 4 of 7 START sql table model main.mart_cart_abandonment ........................ [RUN]
+[0m15:18:32.165110 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ecommerce_funnel.int_funnel_steps, now model.ecommerce_funnel.mart_cart_abandonment)
+[0m15:18:32.178583 [debug] [Thread-1 (]: Began compiling node model.ecommerce_funnel.mart_cart_abandonment
+[0m15:18:32.224219 [debug] [Thread-1 (]: Writing injected SQL for node "model.ecommerce_funnel.mart_cart_abandonment"
+[0m15:18:32.236771 [debug] [Thread-1 (]: Began executing node model.ecommerce_funnel.mart_cart_abandonment
+[0m15:18:32.465979 [debug] [Thread-1 (]: Writing runtime sql for node "model.ecommerce_funnel.mart_cart_abandonment"
+[0m15:18:32.483535 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.mart_cart_abandonment"
+[0m15:18:32.489413 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_cart_abandonment: BEGIN
+[0m15:18:32.493325 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:18:32.493325 [debug] [Thread-1 (]: SQL status: OK in 0.009 seconds
+[0m15:18:32.508348 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.mart_cart_abandonment"
+[0m15:18:32.508348 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_cart_abandonment: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.mart_cart_abandonment"} */
+
+  
+    
+    
+
+    create  table
+      "ecommerce"."main"."mart_cart_abandonment__dbt_tmp"
+  
+    as (
+      SELECT
+    s.session_id,
+    s.user_id,
+    s.channel,
+    s.device,
+    s.country,
+    s.page_views,
+    s.session_duration,
+    s.bounce,
+    s.added_to_cart,
+    s.reached_checkout,
+    s.purchased,
+    CASE WHEN s.added_to_cart=1 AND s.purchased=0 THEN 1 ELSE 0 END AS abandoned
+FROM "ecommerce"."main"."stg_sessions" s
+WHERE s.added_to_cart = 1
+    );
+  
+  
+[0m15:18:32.678264 [debug] [Thread-1 (]: SQL status: OK in 0.163 seconds
+[0m15:18:32.735300 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.mart_cart_abandonment"
+[0m15:18:32.750321 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_cart_abandonment: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.mart_cart_abandonment"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'mart_cart_abandonment'
+  
+[0m15:18:32.755681 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m15:18:32.777009 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.mart_cart_abandonment"
+[0m15:18:32.782013 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_cart_abandonment: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.mart_cart_abandonment"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'mart_cart_abandonment'
+  
+[0m15:18:32.788901 [debug] [Thread-1 (]: SQL status: OK in 0.009 seconds
+[0m15:18:32.834289 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.mart_cart_abandonment"
+[0m15:18:32.839951 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_cart_abandonment: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.mart_cart_abandonment"} */
+alter table "ecommerce"."main"."mart_cart_abandonment" rename to "mart_cart_abandonment__dbt_backup"
+[0m15:18:32.845939 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m15:18:32.900885 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.mart_cart_abandonment"
+[0m15:18:32.903065 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_cart_abandonment: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.mart_cart_abandonment"} */
+alter table "ecommerce"."main"."mart_cart_abandonment__dbt_tmp" rename to "mart_cart_abandonment"
+[0m15:18:32.903065 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m15:18:32.969512 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_cart_abandonment: COMMIT
+[0m15:18:32.987527 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.mart_cart_abandonment"
+[0m15:18:32.990895 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_cart_abandonment: COMMIT
+[0m15:18:33.057178 [debug] [Thread-1 (]: SQL status: OK in 0.058 seconds
+[0m15:18:33.090675 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.mart_cart_abandonment"
+[0m15:18:33.096012 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_cart_abandonment: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.mart_cart_abandonment"} */
+
+      drop table if exists "ecommerce"."main"."mart_cart_abandonment__dbt_backup" cascade
+    
+[0m15:18:33.103671 [debug] [Thread-1 (]: SQL status: OK in 0.010 seconds
+[0m15:18:33.118388 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_cart_abandonment: Close
+[0m15:18:33.118388 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ef8a842f-e9cd-4bf6-a63f-9fc60924de56', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023576AA9750>]}
+[0m15:18:33.135472 [info ] [Thread-1 (]: 4 of 7 OK created sql table model main.mart_cart_abandonment ................... [[32mOK[0m in 0.96s]
+[0m15:18:33.135472 [debug] [Thread-1 (]: Finished running node model.ecommerce_funnel.mart_cart_abandonment
+[0m15:18:33.162137 [debug] [Thread-1 (]: Began running node model.ecommerce_funnel.int_channel_attribution
+[0m15:18:33.170937 [info ] [Thread-1 (]: 5 of 7 START sql view model main.int_channel_attribution ....................... [RUN]
+[0m15:18:33.179666 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ecommerce_funnel.mart_cart_abandonment, now model.ecommerce_funnel.int_channel_attribution)
+[0m15:18:33.184795 [debug] [Thread-1 (]: Began compiling node model.ecommerce_funnel.int_channel_attribution
+[0m15:18:33.236892 [debug] [Thread-1 (]: Writing injected SQL for node "model.ecommerce_funnel.int_channel_attribution"
+[0m15:18:33.257362 [debug] [Thread-1 (]: Began executing node model.ecommerce_funnel.int_channel_attribution
+[0m15:18:33.300261 [debug] [Thread-1 (]: Writing runtime sql for node "model.ecommerce_funnel.int_channel_attribution"
+[0m15:18:33.310525 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.int_channel_attribution"
+[0m15:18:33.314414 [debug] [Thread-1 (]: On model.ecommerce_funnel.int_channel_attribution: BEGIN
+[0m15:18:33.319335 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:18:33.319335 [debug] [Thread-1 (]: SQL status: OK in 0.007 seconds
+[0m15:18:33.319335 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.int_channel_attribution"
+[0m15:18:33.333376 [debug] [Thread-1 (]: On model.ecommerce_funnel.int_channel_attribution: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.int_channel_attribution"} */
+
+  
+  create view "ecommerce"."main"."int_channel_attribution__dbt_tmp" as (
+    SELECT
+    s.channel,
+    COUNT(DISTINCT s.session_id)  AS sessions,
+    COUNT(DISTINCT t.transaction_id) AS transactions,
+    ROUND(SUM(t.revenue),2)       AS total_revenue,
+    ROUND(AVG(t.revenue),2)       AS avg_order_value
+FROM "ecommerce"."main"."stg_sessions" s
+LEFT JOIN "ecommerce"."main"."stg_transactions" t USING (session_id)
+GROUP BY 1
+  );
+
+[0m15:18:33.333376 [debug] [Thread-1 (]: SQL status: OK in 0.008 seconds
+[0m15:18:33.383994 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.int_channel_attribution"
+[0m15:18:33.396013 [debug] [Thread-1 (]: On model.ecommerce_funnel.int_channel_attribution: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.int_channel_attribution"} */
+alter view "ecommerce"."main"."int_channel_attribution" rename to "int_channel_attribution__dbt_backup"
+[0m15:18:33.405549 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m15:18:33.428094 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.int_channel_attribution"
+[0m15:18:33.428094 [debug] [Thread-1 (]: On model.ecommerce_funnel.int_channel_attribution: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.int_channel_attribution"} */
+alter view "ecommerce"."main"."int_channel_attribution__dbt_tmp" rename to "int_channel_attribution"
+[0m15:18:33.444273 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m15:18:33.461327 [debug] [Thread-1 (]: On model.ecommerce_funnel.int_channel_attribution: COMMIT
+[0m15:18:33.461327 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.int_channel_attribution"
+[0m15:18:33.479437 [debug] [Thread-1 (]: On model.ecommerce_funnel.int_channel_attribution: COMMIT
+[0m15:18:33.493164 [debug] [Thread-1 (]: SQL status: OK in 0.007 seconds
+[0m15:18:33.522651 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.int_channel_attribution"
+[0m15:18:33.526968 [debug] [Thread-1 (]: On model.ecommerce_funnel.int_channel_attribution: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.int_channel_attribution"} */
+
+      drop view if exists "ecommerce"."main"."int_channel_attribution__dbt_backup" cascade
+    
+[0m15:18:33.539950 [debug] [Thread-1 (]: SQL status: OK in 0.008 seconds
+[0m15:18:33.561042 [debug] [Thread-1 (]: On model.ecommerce_funnel.int_channel_attribution: Close
+[0m15:18:33.569223 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ef8a842f-e9cd-4bf6-a63f-9fc60924de56', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023577C5FF50>]}
+[0m15:18:33.584884 [info ] [Thread-1 (]: 5 of 7 OK created sql view model main.int_channel_attribution .................. [[32mOK[0m in 0.39s]
+[0m15:18:33.594812 [debug] [Thread-1 (]: Finished running node model.ecommerce_funnel.int_channel_attribution
+[0m15:18:33.607697 [debug] [Thread-1 (]: Began running node model.ecommerce_funnel.mart_funnel_analysis
+[0m15:18:33.614727 [info ] [Thread-1 (]: 6 of 7 START sql table model main.mart_funnel_analysis ......................... [RUN]
+[0m15:18:33.630002 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ecommerce_funnel.int_channel_attribution, now model.ecommerce_funnel.mart_funnel_analysis)
+[0m15:18:33.643001 [debug] [Thread-1 (]: Began compiling node model.ecommerce_funnel.mart_funnel_analysis
+[0m15:18:33.683646 [debug] [Thread-1 (]: Writing injected SQL for node "model.ecommerce_funnel.mart_funnel_analysis"
+[0m15:18:33.694438 [debug] [Thread-1 (]: Began executing node model.ecommerce_funnel.mart_funnel_analysis
+[0m15:18:33.737284 [debug] [Thread-1 (]: Writing runtime sql for node "model.ecommerce_funnel.mart_funnel_analysis"
+[0m15:18:33.751658 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.mart_funnel_analysis"
+[0m15:18:33.757483 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_funnel_analysis: BEGIN
+[0m15:18:33.760256 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:18:33.767394 [debug] [Thread-1 (]: SQL status: OK in 0.007 seconds
+[0m15:18:33.776395 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.mart_funnel_analysis"
+[0m15:18:33.782354 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_funnel_analysis: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.mart_funnel_analysis"} */
+
+  
+    
+    
+
+    create  table
+      "ecommerce"."main"."mart_funnel_analysis__dbt_tmp"
+  
+    as (
+      SELECT
+    channel,
+    device,
+    total_sessions,
+    viewed_product,
+    added_to_cart,
+    reached_checkout,
+    purchased,
+    view_rate,
+    cart_rate,
+    checkout_rate,
+    purchase_rate,
+    ROUND((added_to_cart - purchased)*100.0/NULLIF(added_to_cart,0),2) AS abandonment_rate
+FROM "ecommerce"."main"."int_funnel_steps"
+    );
+  
+  
+[0m15:18:33.989739 [debug] [Thread-1 (]: SQL status: OK in 0.202 seconds
+[0m15:18:33.989739 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.mart_funnel_analysis"
+[0m15:18:33.989739 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_funnel_analysis: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.mart_funnel_analysis"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'mart_funnel_analysis'
+  
+[0m15:18:34.005386 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m15:18:34.031318 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.mart_funnel_analysis"
+[0m15:18:34.038396 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_funnel_analysis: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.mart_funnel_analysis"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'mart_funnel_analysis'
+  
+[0m15:18:34.050396 [debug] [Thread-1 (]: SQL status: OK in 0.006 seconds
+[0m15:18:34.082858 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.mart_funnel_analysis"
+[0m15:18:34.099300 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_funnel_analysis: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.mart_funnel_analysis"} */
+alter table "ecommerce"."main"."mart_funnel_analysis" rename to "mart_funnel_analysis__dbt_backup"
+[0m15:18:34.099300 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m15:18:34.145590 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.mart_funnel_analysis"
+[0m15:18:34.145590 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_funnel_analysis: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.mart_funnel_analysis"} */
+alter table "ecommerce"."main"."mart_funnel_analysis__dbt_tmp" rename to "mart_funnel_analysis"
+[0m15:18:34.164650 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m15:18:34.188231 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_funnel_analysis: COMMIT
+[0m15:18:34.194227 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.mart_funnel_analysis"
+[0m15:18:34.196185 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_funnel_analysis: COMMIT
+[0m15:18:34.235176 [debug] [Thread-1 (]: SQL status: OK in 0.032 seconds
+[0m15:18:34.270248 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.mart_funnel_analysis"
+[0m15:18:34.270248 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_funnel_analysis: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.mart_funnel_analysis"} */
+
+      drop table if exists "ecommerce"."main"."mart_funnel_analysis__dbt_backup" cascade
+    
+[0m15:18:34.287107 [debug] [Thread-1 (]: SQL status: OK in 0.007 seconds
+[0m15:18:34.303373 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_funnel_analysis: Close
+[0m15:18:34.316899 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ef8a842f-e9cd-4bf6-a63f-9fc60924de56', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023577C5CF10>]}
+[0m15:18:34.319765 [info ] [Thread-1 (]: 6 of 7 OK created sql table model main.mart_funnel_analysis .................... [[32mOK[0m in 0.68s]
+[0m15:18:34.336621 [debug] [Thread-1 (]: Finished running node model.ecommerce_funnel.mart_funnel_analysis
+[0m15:18:34.336621 [debug] [Thread-1 (]: Began running node model.ecommerce_funnel.mart_revenue_impact
+[0m15:18:34.354777 [info ] [Thread-1 (]: 7 of 7 START sql table model main.mart_revenue_impact .......................... [RUN]
+[0m15:18:34.361315 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.ecommerce_funnel.mart_funnel_analysis, now model.ecommerce_funnel.mart_revenue_impact)
+[0m15:18:34.371524 [debug] [Thread-1 (]: Began compiling node model.ecommerce_funnel.mart_revenue_impact
+[0m15:18:34.415705 [debug] [Thread-1 (]: Writing injected SQL for node "model.ecommerce_funnel.mart_revenue_impact"
+[0m15:18:34.427879 [debug] [Thread-1 (]: Began executing node model.ecommerce_funnel.mart_revenue_impact
+[0m15:18:34.488655 [debug] [Thread-1 (]: Writing runtime sql for node "model.ecommerce_funnel.mart_revenue_impact"
+[0m15:18:34.503330 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.mart_revenue_impact"
+[0m15:18:34.511330 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_revenue_impact: BEGIN
+[0m15:18:34.518333 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:18:34.527353 [debug] [Thread-1 (]: SQL status: OK in 0.010 seconds
+[0m15:18:34.534353 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.mart_revenue_impact"
+[0m15:18:34.536498 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_revenue_impact: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.mart_revenue_impact"} */
+
+  
+    
+    
+
+    create  table
+      "ecommerce"."main"."mart_revenue_impact__dbt_tmp"
+  
+    as (
+      WITH base AS (
+    SELECT
+        channel,
+        COUNT(*) FILTER (WHERE abandoned=1) AS abandoned_carts,
+        COUNT(*) FILTER (WHERE abandoned=0) AS converted_carts,
+        COUNT(*)                             AS total_carts
+    FROM "ecommerce"."main"."mart_cart_abandonment"
+    GROUP BY 1
+),
+aov AS (
+    SELECT ROUND(AVG(revenue),2) AS avg_order_value
+    FROM "ecommerce"."main"."stg_transactions"
+)
+SELECT
+    b.channel,
+    b.abandoned_carts,
+    b.converted_carts,
+    b.total_carts,
+    a.avg_order_value,
+    ROUND(b.abandoned_carts * a.avg_order_value, 2)          AS lost_revenue,
+    ROUND(b.abandoned_carts * a.avg_order_value * 0.10, 2)   AS recovery_10pct,
+    ROUND(b.abandoned_carts * a.avg_order_value * 0.20, 2)   AS recovery_20pct
+FROM base b CROSS JOIN aov a
+    );
+  
+  
+[0m15:18:34.600930 [debug] [Thread-1 (]: SQL status: OK in 0.059 seconds
+[0m15:18:34.619329 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.mart_revenue_impact"
+[0m15:18:34.624327 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_revenue_impact: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.mart_revenue_impact"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'mart_revenue_impact'
+  
+[0m15:18:34.630499 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m15:18:34.646126 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.mart_revenue_impact"
+[0m15:18:34.646126 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_revenue_impact: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.mart_revenue_impact"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'mart_revenue_impact'
+  
+[0m15:18:34.646126 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m15:18:34.679593 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.mart_revenue_impact"
+[0m15:18:34.679593 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_revenue_impact: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.mart_revenue_impact"} */
+alter table "ecommerce"."main"."mart_revenue_impact" rename to "mart_revenue_impact__dbt_backup"
+[0m15:18:34.693115 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m15:18:34.733196 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.mart_revenue_impact"
+[0m15:18:34.737198 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_revenue_impact: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.mart_revenue_impact"} */
+alter table "ecommerce"."main"."mart_revenue_impact__dbt_tmp" rename to "mart_revenue_impact"
+[0m15:18:34.739287 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m15:18:34.760008 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_revenue_impact: COMMIT
+[0m15:18:34.760008 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.mart_revenue_impact"
+[0m15:18:34.771031 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_revenue_impact: COMMIT
+[0m15:18:34.771031 [debug] [Thread-1 (]: SQL status: OK in 0.008 seconds
+[0m15:18:34.802297 [debug] [Thread-1 (]: Using duckdb connection "model.ecommerce_funnel.mart_revenue_impact"
+[0m15:18:34.820270 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_revenue_impact: /* {"app": "dbt", "dbt_version": "1.11.9", "profile_name": "ecommerce", "target_name": "dev", "node_id": "model.ecommerce_funnel.mart_revenue_impact"} */
+
+      drop table if exists "ecommerce"."main"."mart_revenue_impact__dbt_backup" cascade
+    
+[0m15:18:34.833276 [debug] [Thread-1 (]: SQL status: OK in 0.008 seconds
+[0m15:18:34.843277 [debug] [Thread-1 (]: On model.ecommerce_funnel.mart_revenue_impact: Close
+[0m15:18:34.848270 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ef8a842f-e9cd-4bf6-a63f-9fc60924de56', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023578C70290>]}
+[0m15:18:34.849460 [info ] [Thread-1 (]: 7 of 7 OK created sql table model main.mart_revenue_impact ..................... [[32mOK[0m in 0.49s]
+[0m15:18:34.849460 [debug] [Thread-1 (]: Finished running node model.ecommerce_funnel.mart_revenue_impact
+[0m15:18:34.873478 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:18:34.876904 [debug] [MainThread]: On master: BEGIN
+[0m15:18:34.884941 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m15:18:34.888645 [debug] [MainThread]: SQL status: OK in 0.009 seconds
+[0m15:18:34.888645 [debug] [MainThread]: On master: COMMIT
+[0m15:18:34.903718 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:18:34.907735 [debug] [MainThread]: On master: COMMIT
+[0m15:18:34.915066 [debug] [MainThread]: SQL status: OK in 0.002 seconds
+[0m15:18:34.920848 [debug] [MainThread]: On master: Close
+[0m15:18:34.923849 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:18:34.926848 [debug] [MainThread]: Connection 'create_ecommerce_main' was properly closed.
+[0m15:18:34.929847 [debug] [MainThread]: Connection 'list_ecommerce_main' was properly closed.
+[0m15:18:34.932847 [debug] [MainThread]: Connection 'model.ecommerce_funnel.mart_revenue_impact' was properly closed.
+[0m15:18:34.936599 [info ] [MainThread]: 
+[0m15:18:34.936599 [info ] [MainThread]: Finished running 3 table models, 4 view models in 0 hours 0 minutes and 28.43 seconds (28.43s).
+[0m15:18:34.965228 [debug] [MainThread]: Command end result
+[0m15:18:35.405572 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\zia\Desktop\ecommerce_funnel\dbt_project\target\manifest.json
+[0m15:18:35.420705 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\zia\Desktop\ecommerce_funnel\dbt_project\target\semantic_manifest.json
+[0m15:18:35.526445 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\zia\Desktop\ecommerce_funnel\dbt_project\target\run_results.json
+[0m15:18:35.544055 [info ] [MainThread]: 
+[0m15:18:35.614904 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m15:18:35.624905 [info ] [MainThread]: 
+[0m15:18:35.636113 [info ] [MainThread]: Done. PASS=7 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=7
+[0m15:18:35.656361 [debug] [MainThread]: Command `dbt run` succeeded at 15:18:35.645574 after 40.59 seconds
+[0m15:18:35.675931 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002356D295610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002356D2950D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002356D295190>]}
+[0m15:18:35.681930 [debug] [MainThread]: Flushing usage events
+[0m15:18:39.278110 [debug] [MainThread]: An error was encountered while trying to flush usage events
